@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Séries</title>
+    <title>Cadastro - Série Invencível</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
+            background-color: #1a1a2e;
+            color: #333;
+            margin: 20px;
         }
     </style>
 </head>
@@ -17,38 +17,76 @@
 
 <div class="container">
     <h2>Cadastro de Séries</h2>
-    <form id="serieForm">
-        <div class="form-group">
+    
+    <form id="formSerie">
+        <div class="campo">
             <label for="nome">Nome da Série:</label>
             <input type="text" id="nome" value="Invencível" required>
         </div>
-        <div class="form-group">
-            <label for="streaming">Streaming onde é exibida:</label>
-            <input type="text" id="streaming" value="Prime Video" required>
-        </div>
-        <div class="form-group">
-            <label for="autor">Autor ou Criador:</label>
-            <input type="text" id="autor" value="Robert Kirkman" required>
-        </div>
-        <div class="form-group">
-            <label for="temporadas">Quantidade de Temporadas:</label>
-            <input type="number" id="temporadas" value="4" required>
-        </div>
-        <div class="form-group">
-            <label for="ano">Ano de Criação:</label>
-            <input type="number" id="ano" value="2021" required>
-        </div>
-        <div class="form-group">
-            <label for="personagens">Três Principais Personagens:</label>
-            <input type="text" id="personagens" value="Mark Grayson, Omni-Man, Eve Atômica" required>
+
+        <div class="campo">
+            <label for="streaming">Streaming:</label>
+            <input type="text" id="streaming" value="Amazon Prime Video" required>
         </div>
 
-        <div class="btn-container">
-            <button type="button" class="btn-save" onclick="salvarSerie()">Salvar</button>
-            <button type="button" class="btn-clear" onclick="limparCampos()">Limpar</button>
-            <button type="button" class="btn-edit" onclick="editarSerie()">Editar</button>
-            <button type="button" class="btn-query" onclick="consultarSerie()">Consultar</button>
+        <div class="campo">
+            <label for="criador">Autor / Criador:</label>
+            <input type="text" id="criador" value="Robert Kirkman" required>
+        </div>
+
+        <div class="campo">
+            <label for="temporadas">Quantidade de Temporadas:</label>
+            <input type="number" id="temporadas" min="1" value="5" required>
+        </div>
+
+        <div class="campo">
+            <label for="ano">Ano de Criação:</label>
+            <input type="number" id="ano" min="1800" max="2100" value="2021" required>
+        </div>
+
+        <div class="campo personagens-grupo">
+            <label>Três Principais Personagens:</label>
+            <input type="text" id="p1" value="Mark Grayson (Invencível)" style="margin-bottom: 5px;" required><br>
+            <input type="text" id="p2" value="Nolan Grayson (Omni-Man)" style="margin-bottom: 5px;" required><br>
+            <input type="text" id="p3" value="Samantha Eve (Atom Eve)" required>
+        </div>
+
+        <div class="botoes">
+            <button type="button" class="btn-salvar" onclick="salvarDados()">Salvar</button>
+            <button type="button" onclick="limparFormulario()">Limpar</button>
+            <button type="button" onclick="funcaoNaoImplementada('Editar')">Editar</button>
+            <button type="button" onclick="funcaoNaoImplementada('Consultar')">Consultar</button>
         </div>
     </form>
 </div>
 
+<script>
+
+    function salvarDados() {
+        var nome = document.getElementById('nome').value;
+        var streaming = document.getElementById('streaming').value;
+        var criador = document.getElementById('criador').value;
+        var temporadas = document.getElementById('temporadas').value;
+        var ano = document.getElementById('ano').value;
+        var p1 = document.getElementById('p1').value;
+        var p2 = document.getElementById('p2').value;
+        var p3 = document.getElementById('p3').value;
+
+        if (nome == "" || streaming == "" || criador == "" || temporadas == "" || ano == "" || p1 == "" || p2 == "" || p3 == "") {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+        } else {
+            alert("Série '" + nome + "' salva com sucesso!");
+        }
+    }
+
+    function limparFormulario() {
+        document.getElementById('formSerie').reset();
+    }
+
+    function funcaoNaoImplementada(nomeBotao) {
+        alert("A função de " + nomeBotao + " ainda não foi implementada.");
+    }
+</script>
+
+</body>
+</html>
