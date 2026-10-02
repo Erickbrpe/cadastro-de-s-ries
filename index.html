@@ -4,32 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Séries</title>
-  <style
-   body {
-   background-collor: #a6ed18;
-  }
-  
-  h1 {
-   text-aling: left;
-   color: rgb (101,26,213);
-  }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
 
-  #paragrafol {
-   text-align: center;
-   color: red;
+<div class="container">
+    <h2>Cadastro de Séries</h2>
+    <form id="serieForm">
+        <div class="form-group">
+            <label for="nome">Nome da Série:</label>
+            <input type="text" id="nome" value="Invencível" required>
+        </div>
+        <div class="form-group">
+            <label for="streaming">Streaming onde é exibida:</label>
+            <input type="text" id="streaming" value="Prime Video" required>
+        </div>
+        <div class="form-group">
+            <label for="autor">Autor ou Criador:</label>
+            <input type="text" id="autor" value="Robert Kirkman" required>
+        </div>
+        <div class="form-group">
+            <label for="temporadas">Quantidade de Temporadas:</label>
+            <input type="number" id="temporadas" value="4" required>
+        </div>
+        <div class="form-group">
+            <label for="ano">Ano de Criação:</label>
+            <input type="number" id="ano" value="2021" required>
+        </div>
+        <div class="form-group">
+            <label for="personagens">Três Principais Personagens:</label>
+            <input type="text" id="personagens" value="Mark Grayson, Omni-Man, Eve Atômica" required>
+        </div>
 
-  .center {
-   text-align: center;
-   color: rgb(0,55,255);
-  }
-  </style>
+        <div class="btn-container">
+            <button type="button" class="btn-save" onclick="salvarSerie()">Salvar</button>
+            <button type="button" class="btn-clear" onclick="limparCampos()">Limpar</button>
+            <button type="button" class="btn-edit" onclick="editarSerie()">Editar</button>
+            <button type="button" class="btn-query" onclick="consultarSerie()">Consultar</button>
+        </div>
+    </form>
+</div>
 
-  </head>
-      </body>
-      <br> 
-      <hr> 
-      <p id= "paragrafol"> testando aqui! </p>
-      <p> sem ser afetado por cor. </p>
-      <hr>
-      <h1 class="center">h1 centralizado e em azul usando classe </h1) 
-      <p class= "center"> modificado com classe
