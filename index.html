@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Séries</title>
     <style>
-        
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
+ body {
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
         }
-        h2 {
-            text-align: left;
-            color: rgb(101, 26, 213);
+    h2 {
+        text-align: left;
+        color: rgb(101, 26, 213);
         }
         #area_formulario {
-            background-color: white;
-            padding: 20px;
-            width: 600px;
-            margin: 20px;
+        background-color: white;
+         padding: 20px;
+        width: 600px;
+        margin: 20px;
         }
         .botoes {
-            background-color: #a6ed18;
-            color: black;
-            padding: 5px 15px;
-            margin-right: 5px;
+        background-color: #a6ed18;
+        color: black;
+        padding: 5px 15px;
+        margin-right: 5px;
         }
     </style>
 </head>
@@ -35,33 +34,44 @@
         <hr>
         
         <form action="">
-    <p>
-        <label>1. Nome da série:</label><br>
-        <input type="text" id="nome_serie" size="40">
-    </p>
+        <p>
+            <label>1. Nome da série:</label><br>
+            <input type="text" id="nome_serie" size="40">
+        </p>
             
-    <p>
-        <label>2. Streaming onde a série é exibida:</label><br>
-        <input type="text" id="streaming" size="40">
-    </p>
-    <p>
-        <label>3. Autor ou criador da série:</label><br>
-        <input type="text" id="autor" size="40">
-    </p>
+        <p>
+            <label>2. Streaming onde a série é exibida:</label><br>
+            <input type="text" id="streaming" size="40">
+        </p>
             
-     <p>
-        <label>4. Quantidade de temporadas:</label><br>
-        <input type="number" id="temporadas">
-    </p>
+            <p>
+                <label>3. Autor ou criador da série:</label><br>
+                <input type="text" id="autor" size="40">
+            </p>
             
-     <p>
-        <label>5. Ano de criação:</label><br>
-        <input type="number" id="ano">
-    </p>
+        <p>
+            <label>4. Quantidade de temporadas:</label><br>
+            <input type="text" id="temporadas" size="10">
+        </p>
             
-    <p>
-        <label>6. Três principais personagens:</label><br>
-        <textarea id="personagens" rows="4" cols="42"></textarea>
-    </p>
+        <p>
+            <label>5. Ano de criação:</label><br>
+            <input type="text" id="ano" size="10">
+        </p>
             
-            <hr>
+        <p>
+            <label>6. Três principais personagens:</label><br>
+            <input type="text" id="personagens" size="60">
+        </p>
+            
+        <hr>
+            
+            <button type="submit" class="botoes">Salvar</button>
+            <button type="reset" class="botoes">Limpar</button>
+            <button type="button" class="botoes">Editar</button>
+            <button type="button" class="botoes">Consultar</button>
+        </form>
+    </div>
+
+</body>
+</html>
