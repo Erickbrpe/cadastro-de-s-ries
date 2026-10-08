@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Séries</title>
     <style>
- body {
+        body {
         background-color: #f4f4f4;
         font-family: Arial, sans-serif;
         }
-    h2 {
+        h2 {
         text-align: left;
         color: rgb(101, 26, 213);
         }
         #area_formulario {
         background-color: white;
-         padding: 20px;
+        padding: 20px;
         width: 600px;
         margin: 20px;
         }
         .botoes {
-        background-color: #a6ed18;
         color: black;
         padding: 5px 15px;
         margin-right: 5px;
+        }
+        
+        .salvar {
+        background-color: #a6ed18;
+        }
+        .limpar {
+        background-color: #ff6666;
+        }
+        .editar {
+        background-color: #66b3ff;
+        }
+        .consultar {
+        background-color: #ffcc00;
         }
     </style>
 </head>
@@ -38,38 +50,38 @@
             <label>1. Nome da série:</label><br>
             <input type="text" id="nome_serie" size="40">
         </p>
-            
+                
         <p>
             <label>2. Streaming onde a série é exibida:</label><br>
             <input type="text" id="streaming" size="40">
         </p>
-            
-            <p>
-                <label>3. Autor ou criador da série:</label><br>
-                <input type="text" id="autor" size="40">
-            </p>
-            
+                
+        <p>
+            <label>3. Autor ou criador da série:</label><br>
+            <input type="text" id="autor" size="40">
+        </p>
+                
         <p>
             <label>4. Quantidade de temporadas:</label><br>
             <input type="text" id="temporadas" size="10">
         </p>
-            
+                
         <p>
             <label>5. Ano de criação:</label><br>
             <input type="text" id="ano" size="10">
         </p>
-            
+                
         <p>
             <label>6. Três principais personagens:</label><br>
             <input type="text" id="personagens" size="60">
         </p>
-            
-        <hr>
-            
-            <button type="submit" class="botoes">Salvar</button>
-            <button type="reset" class="botoes">Limpar</button>
-            <button type="button" class="botoes">Editar</button>
-            <button type="button" class="botoes">Consultar</button>
+                
+            <hr>
+                
+            <button type="submit" class="botoes salvar">Salvar</button>
+            <button type="reset" class="botoes limpar">Limpar</button>
+            <button type="button" class="botoes editar">Editar</button>
+            <button type="button" class="botoes consultar">Consultar</button>
         </form>
     </div>
 
